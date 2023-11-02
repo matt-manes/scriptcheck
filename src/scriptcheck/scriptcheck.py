@@ -13,7 +13,7 @@ def get_scripts_windows() -> list[str]:
 
 def get_scripts_unix() -> list[str]:
     """Returns a list of scripts from `~/.local/bin`."""
-    return [file.name for file in (Pathier.home() / ".local" / "bin")]
+    return [file.name for file in (Pathier.home() / ".local" / "bin").iterdir()]
 
 
 def get_scripts() -> list[str]:
